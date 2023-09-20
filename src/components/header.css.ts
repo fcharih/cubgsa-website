@@ -1,6 +1,28 @@
 import { style, styleVariants } from "@vanilla-extract/css"
 import { theme } from "../theme.css"
 import { media } from "./ui.css"
+import { colors } from "../colors.css"
+
+export const headerContainer = style({
+  width: "100%",
+  height: "100px",
+  background: colors.carletonRed,
+})
+
+export const linksContainer = style({
+  height: "100%",
+  width: "70%",
+  display: "flex",
+  justifyContent: "space-around",
+  color: "black",
+  margin: "auto",
+})
+
+export const link = style({
+  color: "black",
+  textDecoration: "none",
+  margin: "auto",
+})
 
 export const desktopHeaderNavWrapper = style({
   position: "relative",

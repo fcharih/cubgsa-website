@@ -19,6 +19,7 @@ module.exports = {
         spaceId: process.env.CONTENTFUL_SPACE_ID,
         accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
         host: process.env.CONTENTFUL_HOST,
+        useNameForId: false
       },
     },
     "gatsby-plugin-sharp",
@@ -28,8 +29,8 @@ module.exports = {
     {
       resolve: "gatsby-plugin-manifest",
       options: {
-        name: "Gatsby Starter Contentful Homepage",
-        short_name: "Gatsby",
+        name: "BGSA Carleton",
+        short_name: "CUBGSA",
         start_url: "/",
         // These can be imported once ESM support lands
         background_color: "#ffe491",

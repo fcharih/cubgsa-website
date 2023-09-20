@@ -6,44 +6,30 @@ import Fallback from "../components/fallback"
 import SEOHead from "../components/head"
 
 export default function Homepage(props) {
-  const { homepage } = props.data
+  //const {  } = props.data
+  console.log(props.data);
 
-  return (
-    <Layout>
-      {homepage.blocks.map((block) => {
-        const { id, blocktype, ...componentProps } = block
-        const Component = sections[blocktype] || Fallback
-        return <Component key={id} {...componentProps} />
-      })}
-    </Layout>
-  )
+  return <Layout>Hello</Layout>
 }
-export const Head = (props) => {
-  const { homepage } = props.data
-  return <SEOHead {...homepage} />
-}
+//export const Head = (props) => {
+//  const { homepage } = props.data
+//  return <SEOHead {...homepage} />
+//}
 export const query = graphql`
-  {
-    homepage {
-      id
-      title
-      description
-      image {
-        id
-        url
-      }
-      blocks: content {
-        id
-        blocktype
-        ...HomepageHeroContent
-        ...HomepageFeatureListContent
-        ...HomepageCtaContent
-        ...HomepageLogoListContent
-        ...HomepageTestimonialListContent
-        ...HomepageBenefitListContent
-        ...HomepageStatListContent
-        ...HomepageProductListContent
-      }
+query {
+    allContentfulMember{
+        edges{
+            node{
+              name,
+              role,
+              program,
+              advisor,
+              researchTopic,
+              biography {
+                raw
+              }
+            }
+        }
     }
-  }
+}
 `
