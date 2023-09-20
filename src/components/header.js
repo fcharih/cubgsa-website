@@ -15,6 +15,7 @@ import {
 import * as styles from "./header.css"
 import NavItemGroup from "./nav-item-group"
 import BrandLogo from "./brand-logo"
+import CubgsaLogo from "./cubgsa-logo"
 
 const MENU_ITEMS = [
   { title: "Home", url: "/" },
@@ -28,7 +29,9 @@ const MENU_ITEMS = [
 export default function Header() {
   return (
     <header className={styles.headerContainer}>
-      <div className="logo-container"></div>
+      <div className="logo-container">
+        <CubgsaLogo height={100} />
+      </div>
       <nav className={styles.linksContainer}>
         {MENU_ITEMS.map((item) => (
           <a className={styles.link} href={item.url}>

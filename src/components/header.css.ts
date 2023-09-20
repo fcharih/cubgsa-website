@@ -5,8 +5,12 @@ import { colors } from "../colors.css"
 
 export const headerContainer = style({
   width: "100%",
-  height: "100px",
+  height: "80px",
   background: colors.carletonRed,
+  display: "flex",
+  alignItems: "center",
+  position: "fixed",
+  top: 0,
 })
 
 export const linksContainer = style({
@@ -19,7 +23,7 @@ export const linksContainer = style({
 })
 
 export const link = style({
-  color: "black",
+  color: "white",
   textDecoration: "none",
   margin: "auto",
 })
